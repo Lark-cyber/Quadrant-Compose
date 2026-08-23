@@ -1,4 +1,4 @@
-package com.example.articlecompose
+package com.example.quadrantcompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -31,6 +31,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuadrantComposeTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
+                    Display()
                 }
             }
         }
@@ -61,11 +62,24 @@ fun QuadrantCompose(
     }
 }
 
+@Composable
+fun Display(modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Row(modifier = Modifier.weight(1f)) {
+            QuadrantCompose(
+                title = stringResource(R.string.title1),
+                description = stringResource(R.string.description1),
+                modifier = Modifier.weight(1f).fillMaxHeight().background(Color(0xFFEADDFF)).padding(16.dp)
+            )
+        }
+    }
+}
 
 
 @Preview(showBackground = true)
 @Composable
 fun DisplayPreview() {
     QuadrantComposeTheme {
+        Display()
     }
 }
