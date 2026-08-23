@@ -71,6 +71,11 @@ fun Display(modifier: Modifier = Modifier) {
                 description = stringResource(R.string.description1),
                 modifier = Modifier.weight(1f).fillMaxHeight().background(Color(0xFFEADDFF)).padding(16.dp)
             )
+            QuadrantCompose(
+                title = stringResource(R.string.title2),
+                description = stringResource(R.string.description2),
+                modifier = Modifier.weight(1f).fillMaxHeight().background(Color(0xFFD0BCFF)).padding(16.dp)
+            )
         }
     }
 }
