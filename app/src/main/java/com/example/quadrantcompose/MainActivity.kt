@@ -77,6 +77,14 @@ fun Display(modifier: Modifier = Modifier) {
                 modifier = Modifier.weight(1f).fillMaxHeight().background(Color(0xFFD0BCFF)).padding(16.dp)
             )
         }
+        Row(modifier = Modifier.weight(1f)) {
+            QuadrantCompose(
+                title = stringResource(R.string.title3),
+                description = stringResource(R.string.description3),
+                modifier = Modifier.weight(1f).fillMaxHeight().background(Color(0xFFB69DF8))
+                    .padding(16.dp)
+            )
+        }
     }
 }
 
